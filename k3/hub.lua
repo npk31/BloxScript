@@ -7,13 +7,15 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 37 | Scripts: 5 | Modules: 2 | Tags: 0
+-- Instances: 36 | Scripts: 5 | Modules: 2 | Tags: 0
 local G2L = {};
 
 -- StarterGui.K31Hub
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["DisplayOrder"] = 1000000;
 G2L["1"]["Name"] = [[K31Hub]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
 
 
 -- StarterGui.K31Hub.HubModule
@@ -37,36 +39,36 @@ G2L["4"]["Size"] = UDim2.new(0, 50, 0, 50);
 G2L["4"]["Name"] = [[NavGui]];
 G2L["4"]["ClipsDescendants"] = true;
 G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Text"] = [[]];
 G2L["4"]["Position"] = UDim2.new(0.92, 0, 0.271, 0);
 
 
--- StarterGui.K31Hub.NavGui.UICorner
-G2L["5"] = Instance.new("UICorner", G2L["4"]);
-
-
-
 -- StarterGui.K31Hub.NavGui.O/C
-G2L["6"] = Instance.new("LocalScript", G2L["4"]);
-G2L["6"]["Name"] = [[O/C]];
+G2L["5"] = Instance.new("LocalScript", G2L["4"]);
+G2L["5"]["Name"] = [[O/C]];
 
 
 -- StarterGui.K31Hub.NavGui.ImageLabel
-G2L["7"] = Instance.new("ImageLabel", G2L["4"]);
-G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["Image"] = [[rbxassetid://74949552087885]];
-G2L["7"]["Size"] = UDim2.new(0, 50, 0, 50);
-G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"] = Instance.new("ImageLabel", G2L["4"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Image"] = [[rbxassetid://74949552087885]];
+G2L["6"]["Size"] = UDim2.new(0, 50, 0, 50);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 
 -- StarterGui.K31Hub.NavGui.ImageLabel.UICorner
-G2L["8"] = Instance.new("UICorner", G2L["7"]);
+G2L["7"] = Instance.new("UICorner", G2L["6"]);
+
+
+
+-- StarterGui.K31Hub.NavGui.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["4"]);
 
 
 
 -- StarterGui.K31Hub.Menu
 G2L["9"] = Instance.new("Frame", G2L["1"]);
+G2L["9"]["BorderSizePixel"] = 0;
 G2L["9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9"]["ClipsDescendants"] = true;
 G2L["9"]["Size"] = UDim2.new(0, 425, 0, 300);
@@ -86,7 +88,7 @@ G2L["b"] = Instance.new("Frame", G2L["9"]);
 G2L["b"]["BorderSizePixel"] = 0;
 G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["b"]["Size"] = UDim2.new(0, 425, 0, 44);
-G2L["b"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b"]["Name"] = [[Header]];
 G2L["b"]["LayoutOrder"] = 1;
 G2L["b"]["BackgroundTransparency"] = 1;
@@ -94,7 +96,6 @@ G2L["b"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.K31Hub.Menu.Header.close
 G2L["c"] = Instance.new("TextButton", G2L["b"]);
-G2L["c"]["TextWrapped"] = true;
 G2L["c"]["BorderSizePixel"] = 0;
 G2L["c"]["TextSize"] = 21;
 G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
@@ -135,7 +136,6 @@ G2L["f"] = Instance.new("LocalScript", G2L["e"]);
 
 -- StarterGui.K31Hub.Menu.Header.Logo
 G2L["10"] = Instance.new("ImageLabel", G2L["b"]);
-G2L["10"]["ZIndex"] = 0;
 G2L["10"]["BorderSizePixel"] = 0;
 G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["10"]["Image"] = [[rbxassetid://133853604239323]];
@@ -149,7 +149,7 @@ G2L["10"]["Position"] = UDim2.new(0, 0, -0.15, 0);
 -- StarterGui.K31Hub.Menu.Header.bottom
 G2L["11"] = Instance.new("ImageLabel", G2L["b"]);
 G2L["11"]["BorderSizePixel"] = 0;
-G2L["11"]["BackgroundColor3"] = Color3.fromRGB(157, 157, 157);
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(158, 158, 158);
 G2L["11"]["Size"] = UDim2.new(0, 424, 0, 1);
 G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["11"]["Name"] = [[bottom]];
@@ -170,7 +170,8 @@ G2L["12"]["BackgroundTransparency"] = 1;
 -- StarterGui.K31Hub.Menu.Task.right
 G2L["13"] = Instance.new("ImageLabel", G2L["12"]);
 G2L["13"]["BorderSizePixel"] = 0;
-G2L["13"]["BackgroundColor3"] = Color3.fromRGB(163, 163, 163);
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(164, 164, 164);
+G2L["13"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
 G2L["13"]["Size"] = UDim2.new(0, 1, 0, 252);
 G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["13"]["Name"] = [[right]];
@@ -186,8 +187,8 @@ G2L["14"]["Name"] = [[Tasks]];
 G2L["15"] = Instance.new("TextButton", G2L["14"]);
 G2L["15"]["BorderSizePixel"] = 0;
 G2L["15"]["TextSize"] = 14;
-G2L["15"]["TextColor3"] = Color3.fromRGB(221, 221, 221);
-G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(222, 222, 222);
 G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["15"]["Size"] = UDim2.new(0, 120, 0, 30);
 G2L["15"]["BackgroundTransparency"] = 1;
@@ -226,6 +227,7 @@ G2L["18"]["BackgroundTransparency"] = 0.85;
 
 -- StarterGui.K31Hub.Menu.Commands.SetPoint.TextLabel
 G2L["19"] = Instance.new("TextLabel", G2L["18"]);
+G2L["19"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
 G2L["19"]["BorderSizePixel"] = 0;
 G2L["19"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -247,7 +249,6 @@ G2L["1a"]["CornerRadius"] = UDim.new(0, 2);
 -- StarterGui.K31Hub.Menu.Commands.SetPoint.ActiveBtn
 G2L["1b"] = Instance.new("TextButton", G2L["18"]);
 G2L["1b"]["BorderSizePixel"] = 0;
-G2L["1b"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1b"]["TextSize"] = 14;
 G2L["1b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -266,7 +267,7 @@ G2L["1c"]["BorderSizePixel"] = 0;
 G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1c"]["Image"] = [[rbxassetid://109528499199500]];
 G2L["1c"]["Size"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["1c"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1c"]["BackgroundTransparency"] = 1;
 G2L["1c"]["Position"] = UDim2.new(0.25, 0, 0.25, 0);
 
@@ -287,64 +288,59 @@ G2L["1e"]["Name"] = [[Tween]];
 G2L["1e"]["BackgroundTransparency"] = 0.85;
 
 
--- StarterGui.K31Hub.Menu.Commands.Tween.UICorner
-G2L["1f"] = Instance.new("UICorner", G2L["1e"]);
-G2L["1f"]["CornerRadius"] = UDim.new(0, 2);
-
-
 -- StarterGui.K31Hub.Menu.Commands.Tween.TextLabel
-G2L["20"] = Instance.new("TextLabel", G2L["1e"]);
-G2L["20"]["BorderSizePixel"] = 0;
-G2L["20"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["20"]["TextSize"] = 14;
-G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["20"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["20"]["BackgroundTransparency"] = 1;
-G2L["20"]["Size"] = UDim2.new(0, 168, 0, 50);
-G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["20"]["Text"] = [[Tween]];
-G2L["20"]["Position"] = UDim2.new(0.06122, 0, 0, 0);
+G2L["1f"] = Instance.new("TextLabel", G2L["1e"]);
+G2L["1f"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["TextSize"] = 14;
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["BackgroundTransparency"] = 1;
+G2L["1f"]["Size"] = UDim2.new(0, 168, 0, 50);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Text"] = [[Tween]];
+G2L["1f"]["Position"] = UDim2.new(0.06122, 0, 0, 0);
 
 
 -- StarterGui.K31Hub.Menu.Commands.Tween.State
-G2L["21"] = Instance.new("TextButton", G2L["1e"]);
-G2L["21"]["BorderSizePixel"] = 0;
-G2L["21"]["TextSize"] = 14;
-G2L["21"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["21"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
-G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["21"]["Size"] = UDim2.new(0, 40, 0, 20);
-G2L["21"]["Name"] = [[State]];
-G2L["21"]["ClipsDescendants"] = true;
-G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["21"]["Text"] = [[]];
-G2L["21"]["Position"] = UDim2.new(0.8, 0, 0.35, 0);
-
-
--- StarterGui.K31Hub.Menu.Commands.Tween.State.UICorner
-G2L["22"] = Instance.new("UICorner", G2L["21"]);
-G2L["22"]["CornerRadius"] = UDim.new(1, 0);
-
-
--- StarterGui.K31Hub.Menu.Commands.Tween.State.Circle
-G2L["23"] = Instance.new("ImageLabel", G2L["21"]);
-G2L["23"]["BorderSizePixel"] = 0;
-G2L["23"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23"]["Size"] = UDim2.new(0.4, 0, 0.8, 0);
-G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23"]["Name"] = [[Circle]];
-G2L["23"]["Position"] = UDim2.new(0.05, 0, 0.1, 0);
-
-
--- StarterGui.K31Hub.Menu.Commands.Tween.State.Circle.UICorner
-G2L["24"] = Instance.new("UICorner", G2L["23"]);
-G2L["24"]["CornerRadius"] = UDim.new(1, 0);
+G2L["20"] = Instance.new("TextButton", G2L["1e"]);
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["TextSize"] = 14;
+G2L["20"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(242, 242, 242);
+G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["20"]["Size"] = UDim2.new(0, 40, 0, 20);
+G2L["20"]["Name"] = [[State]];
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Text"] = [[]];
+G2L["20"]["Position"] = UDim2.new(0.8, 0, 0.35, 0);
 
 
 -- StarterGui.K31Hub.Menu.Commands.Tween.State.LocalScript
-G2L["25"] = Instance.new("LocalScript", G2L["21"]);
+G2L["21"] = Instance.new("LocalScript", G2L["20"]);
 
+
+
+-- StarterGui.K31Hub.Menu.Commands.Tween.State.Circle
+G2L["22"] = Instance.new("ImageLabel", G2L["20"]);
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Size"] = UDim2.new(0.4, 0, 0.8, 0);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Name"] = [[Circle]];
+G2L["22"]["Position"] = UDim2.new(0.05, 0, 0.1, 0);
+
+
+-- StarterGui.K31Hub.Menu.Commands.Tween.State.Circle.UICorner
+G2L["23"] = Instance.new("UICorner", G2L["22"]);
+G2L["23"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.K31Hub.Menu.Commands.Tween.State.UICorner
+G2L["24"] = Instance.new("UICorner", G2L["20"]);
+G2L["24"]["CornerRadius"] = UDim.new(1, 0);
 
 
 -- Require G2L wrapper
@@ -370,13 +366,13 @@ local module = {}
 
 local connections = {
 	noclip = {
-		
+
 	},
 	tween = {
-		
+
 	},
 	floating = {
-		
+
 	}
 }
 
@@ -384,225 +380,225 @@ module.notificationShown = false
 
 
 --Notification
-	function module.notification(GUI, message)
-		local label = Instance.new("TextLabel")
-		label.Parent = GUI -- Gán đối tượng cha cho TextLabel
-		label.Text = message -- Nội dung văn bản
-		label.TextColor3 = Color3.fromRGB(255, 0, 0) -- Màu chữ (đỏ)
-		label.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Italic) -- Font Roboto kiểu chữ Italic
-		label.BackgroundTransparency = 1 -- Làm trong suốt nền
-		label.Size = UDim2.new(0, 424, 0, 25) -- Kích thước TextLabel
-		label.Position = UDim2.new(0.336, 0, 0.045, 0) -- Vị trí trên GUI
-		label.TextSize = 24 -- Kích thước chữ
-		label.Name = "Notification"
-		
-		wait(3)
-		label:Destroy()
-	end
+function module.notification(GUI, message)
+	local label = Instance.new("TextLabel")
+	label.Parent = GUI -- Gán đối tượng cha cho TextLabel
+	label.Text = message -- Nội dung văn bản
+	label.TextColor3 = Color3.fromRGB(255, 0, 0) -- Màu chữ (đỏ)
+	label.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Regular, Enum.FontStyle.Italic) -- Font Roboto kiểu chữ Italic
+	label.BackgroundTransparency = 1 -- Làm trong suốt nền
+	label.Size = UDim2.new(0, 424, 0, 25) -- Kích thước TextLabel
+	label.Position = UDim2.new(0.336, 0, 0.045, 0) -- Vị trí trên GUI
+	label.TextSize = 24 -- Kích thước chữ
+	label.Name = "Notification"
+
+	wait(3)
+	label:Destroy()
+end
 
 
 
 -- No Clip
-	function module.noclip(character, callback)
-		if not character or not character:IsA("Model") then
-			error("Invalid character provided for noclip.")
-		end
-
-		local function updateNoClip()
-			for _, part in pairs(character:GetChildren()) do
-				if part:IsA("BasePart") then
-					part.CanCollide = false
-				end
-			end
-		end
-
-		updateNoClip()
-
-		local connection = RunService.Heartbeat:Connect(updateNoClip)
-		connections.noclip[character] = connection
-
-		if callback and typeof(callback) == "function" then
-			callback()
-		end
-
-		return {
-			unnoclip = module.unnoclip
-		}
+function module.noclip(character, callback)
+	if not character or not character:IsA("Model") then
+		error("Invalid character provided for noclip.")
 	end
 
--- UnNo Clip
-	function module.unnoclip(character)
-		if not character or not character:IsA("Model") then
-			error("Invalid character provided for unnoclip.")
-		end
-
-		if connections.noclip[character] then
-			connections.noclip[character]:Disconnect()
-			connections.noclip[character] = nil
-		end
-
+	local function updateNoClip()
 		for _, part in pairs(character:GetChildren()) do
 			if part:IsA("BasePart") then
-				part.CanCollide = true
+				part.CanCollide = false
 			end
 		end
-
 	end
+
+	updateNoClip()
+
+	local connection = RunService.Heartbeat:Connect(updateNoClip)
+	connections.noclip[character] = connection
+
+	if callback and typeof(callback) == "function" then
+		callback()
+	end
+
+	return {
+		unnoclip = module.unnoclip
+	}
+end
+
+-- UnNo Clip
+function module.unnoclip(character)
+	if not character or not character:IsA("Model") then
+		error("Invalid character provided for unnoclip.")
+	end
+
+	if connections.noclip[character] then
+		connections.noclip[character]:Disconnect()
+		connections.noclip[character] = nil
+	end
+
+	for _, part in pairs(character:GetChildren()) do
+		if part:IsA("BasePart") then
+			part.CanCollide = true
+		end
+	end
+
+end
 
 
 
 
 --Tween Character
-	function module.tween(character, targetPosition, callback)
-		if not character or not character:IsA("Model") then
-			error("Invalid character provided.")
-		end
-		
-		if typeof(callback) ~= "function" then
-			callback = function() end -- Nếu callback không được truyền, tạo hàm rỗng.
-		end
-		
-		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-		local speed = 100
-		
-		local bodyVelocity = Instance.new("BodyVelocity")
-		bodyVelocity.Parent = humanoidRootPart
-		bodyVelocity.MaxForce = Vector3.new(100000, 100000, 100000) -- Lực tối đa
-		bodyVelocity.Velocity = (targetPosition - humanoidRootPart.Position).Unit * speed -- Tính hướng và tốc độ bay
-
-		-- Kết nối vòng lặp kiểm tra khoảng cách
-		local connection
-		connection = RunService.Heartbeat:Connect(function()
-			local distance = (humanoidRootPart.Position - targetPosition).Magnitude -- Tính khoảng cách
-			if distance < 2 then -- Ngưỡng dừng
-				bodyVelocity.Velocity = Vector3.new(0, 0, 0)
-				bodyVelocity.MaxForce = Vector3.new(0, 0, 0)
-				
-				bodyVelocity:Destroy() -- Xóa BodyVelocity
-				connection:Disconnect() -- Ngắt vòng lặp
-				callback()
-			else
-				-- Cập nhật lại hướng di chuyển nếu người chơi lệch khỏi hướng
-				local directionToTarget = (targetPosition - humanoidRootPart.Position).Unit -- Tính hướng đến target
-				
-				if distance < 2.5 then
-					speed = 5
-				elseif distance < 5 then
-					speed = 10
-				end
-				
-				bodyVelocity.Velocity = directionToTarget * speed -- Cập nhật velocity để quay lại hướng đúng
-			end
-		end)
-		
-		
-		connections.tween[character] = {
-			disable = function ()
-				bodyVelocity:Destroy()
-				connection:Disconnect()
-			end,
-		}
+function module.tween(character, targetPosition, callback)
+	if not character or not character:IsA("Model") then
+		error("Invalid character provided.")
 	end
+
+	if typeof(callback) ~= "function" then
+		callback = function() end -- Nếu callback không được truyền, tạo hàm rỗng.
+	end
+
+	local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	local speed = 100
+
+	local bodyVelocity = Instance.new("BodyVelocity")
+	bodyVelocity.Parent = humanoidRootPart
+	bodyVelocity.MaxForce = Vector3.new(100000, 100000, 100000) -- Lực tối đa
+	bodyVelocity.Velocity = (targetPosition - humanoidRootPart.Position).Unit * speed -- Tính hướng và tốc độ bay
+
+	-- Kết nối vòng lặp kiểm tra khoảng cách
+	local connection
+	connection = RunService.Heartbeat:Connect(function()
+		local distance = (humanoidRootPart.Position - targetPosition).Magnitude -- Tính khoảng cách
+		if distance < 2 then -- Ngưỡng dừng
+			bodyVelocity.Velocity = Vector3.new(0, 0, 0)
+			bodyVelocity.MaxForce = Vector3.new(0, 0, 0)
+
+			bodyVelocity:Destroy() -- Xóa BodyVelocity
+			connection:Disconnect() -- Ngắt vòng lặp
+			callback()
+		else
+			-- Cập nhật lại hướng di chuyển nếu người chơi lệch khỏi hướng
+			local directionToTarget = (targetPosition - humanoidRootPart.Position).Unit -- Tính hướng đến target
+
+			if distance < 2.5 then
+				speed = 5
+			elseif distance < 5 then
+				speed = 10
+			end
+
+			bodyVelocity.Velocity = directionToTarget * speed -- Cập nhật velocity để quay lại hướng đúng
+		end
+	end)
+
+
+	connections.tween[character] = {
+		disable = function ()
+			bodyVelocity:Destroy()
+			connection:Disconnect()
+		end,
+	}
+end
 
 
 
 --Tween + Noclip
-	function module.tween_noclip(character, targetPosition, callback)
-		module.noclip(character, function ()
-			module.tween(character, targetPosition, function ()
-				module.unnoclip(character)
-				if callback and typeof(callback) == "function" then
-					callback()
-				end
-			end)
+function module.tween_noclip(character, targetPosition, callback)
+	module.noclip(character, function ()
+		module.tween(character, targetPosition, function ()
+			module.unnoclip(character)
+			if callback and typeof(callback) == "function" then
+				callback()
+			end
 		end)
+	end)
 
-		return {
-			disable = module.disable_tween_noclip
-		}
-	end
-	
-	
+	return {
+		disable = module.disable_tween_noclip
+	}
+end
+
+
 
 
 --Disable Tween + NoClip
-	function module.disable_tween_noclip(character, callback)
-		if not character or not character:IsA("Model") then
-			error("Invalid character provided.")
-		end
-
-		if connections.tween[character] then
-			connections.tween[character].disable()
-			connections.tween[character] = nil
-		end
-
-		-- Nếu muốn dừng noclip, bạn cũng có thể ngắt kết nối noclip tại đây
-			if connections.noclip[character] then
-				connections.noclip[character]:Disconnect()
-				connections.noclip[character] = nil
-			end
-
-		if typeof(callback) ~= "function" then
-			callback = function() end -- Nếu callback không được truyền, tạo hàm rỗng.
-		end
-
-		callback()
+function module.disable_tween_noclip(character, callback)
+	if not character or not character:IsA("Model") then
+		error("Invalid character provided.")
 	end
+
+	if connections.tween[character] then
+		connections.tween[character].disable()
+		connections.tween[character] = nil
+	end
+
+	-- Nếu muốn dừng noclip, bạn cũng có thể ngắt kết nối noclip tại đây
+	if connections.noclip[character] then
+		connections.noclip[character]:Disconnect()
+		connections.noclip[character] = nil
+	end
+
+	if typeof(callback) ~= "function" then
+		callback = function() end -- Nếu callback không được truyền, tạo hàm rỗng.
+	end
+
+	callback()
+end
 
 
 
 
 
 --Floating
-	function module.floating(character, callback)
-		if not character or not character:IsA("Model") then
-			error("Invalid character provided.")
-		end
-		
-		local function updateAnchor()
-			for _, part in pairs(character:GetChildren()) do
-				if part:IsA("BasePart") then
-					part.Anchored = true
-				end
-			end
-		end
-
-		updateAnchor()
-
-		local connection = RunService.Heartbeat:Connect(updateAnchor)
-		connections.floating[character] = connection
-
-		if callback and typeof(callback) == "function" then
-			callback()
-		end
-		
-		return {
-			disable = module.disable_floating
-		}
+function module.floating(character, callback)
+	if not character or not character:IsA("Model") then
+		error("Invalid character provided.")
 	end
-	
-	
-	
 
---Disable Floating
-	function module.disable_floating(character, callback)
-		if not character or not character:IsA("Model") then
-			error("Invalid character provided.")
-		end
-		
-		connections.floating[character]:Disconnect()
-		
+	local function updateAnchor()
 		for _, part in pairs(character:GetChildren()) do
 			if part:IsA("BasePart") then
-				part.Anchored = false
+				part.Anchored = true
 			end
 		end
-		
-		if callback and typeof(callback) == "function" then
-			callback()
-		end
-		
 	end
+
+	updateAnchor()
+
+	local connection = RunService.Heartbeat:Connect(updateAnchor)
+	connections.floating[character] = connection
+
+	if callback and typeof(callback) == "function" then
+		callback()
+	end
+
+	return {
+		disable = module.disable_floating
+	}
+end
+
+
+
+
+--Disable Floating
+function module.disable_floating(character, callback)
+	if not character or not character:IsA("Model") then
+		error("Invalid character provided.")
+	end
+
+	connections.floating[character]:Disconnect()
+
+	for _, part in pairs(character:GetChildren()) do
+		if part:IsA("BasePart") then
+			part.Anchored = false
+		end
+	end
+
+	if callback and typeof(callback) == "function" then
+		callback()
+	end
+
+end
 
 
 return module
@@ -789,8 +785,8 @@ return module
 end;
 };
 -- StarterGui.K31Hub.NavGui.O/C
-local function C_6()
-local script = G2L["6"];
+local function C_5()
+local script = G2L["5"];
 	local Btn = script.Parent
 	local Hub = script.Parent.Parent
 	local player = game:GetService("Players").LocalPlayer
@@ -804,13 +800,14 @@ local script = G2L["6"];
 		Hub.Menu.Visible = (Hub.Menu:GetAttribute("Toggle") and true) or false
 	end)
 end;
-task.spawn(C_6);
+task.spawn(C_5);
 -- StarterGui.K31Hub.Menu.Header.close.LocalScript
 local function C_d()
 local script = G2L["d"];
-	script.Parent.MouseButton1Click:Connect(function ()
+	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
+	
 end;
 task.spawn(C_d);
 -- StarterGui.K31Hub.Menu.Header.hide.LocalScript
@@ -818,11 +815,10 @@ local function C_f()
 local script = G2L["f"];
 	local Hub = script.Parent.Parent.Parent.Parent
 	
-	script.Parent.MouseButton1Click:Connect(function ()
+	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Visible = false
 		Hub.Menu:SetAttribute("Toggle", not Hub.Menu:GetAttribute("Toggle"))
 	end)
-	
 	
 end;
 task.spawn(C_f);
@@ -841,13 +837,13 @@ local script = G2L["1d"];
 		Title.TextColor3 = Color3.fromRGB(28, 255, 47)
 		wait(1)
 		Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-		
+	
 	end)
 end;
 task.spawn(C_1d);
 -- StarterGui.K31Hub.Menu.Commands.Tween.State.LocalScript
-local function C_25()
-local script = G2L["25"];
+local function C_21()
+local script = G2L["21"];
 	local TweenService = game:GetService("TweenService")
 	
 	local Hub = script.Parent.Parent.Parent.Parent.Parent
@@ -873,7 +869,7 @@ local script = G2L["25"];
 		if (not Button:GetAttribute("Toggle")) ~= state then
 			return
 		end
-		
+	
 		Button:SetAttribute("Toggle", not Button:GetAttribute("Toggle"))
 		Button.BackgroundColor3 = (Button:GetAttribute("Toggle") and Color3.fromRGB(44, 244, 255)) or Color3.fromRGB(240, 240, 240)
 		local goal = { Position = (Button:GetAttribute("Toggle") and UDim2.new(0.55, 0, 0.1, 0)) or UDim2.new(0.05, 0, 0.1, 0) }
@@ -932,8 +928,7 @@ local script = G2L["25"];
 			end)()
 		end
 	end)
-	
 end;
-task.spawn(C_25);
+task.spawn(C_21);
 
 return G2L["1"], require;
